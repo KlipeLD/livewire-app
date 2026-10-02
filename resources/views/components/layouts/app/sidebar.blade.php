@@ -14,6 +14,26 @@
             <flux:navlist variant="outline">
                 <flux:navlist.group heading="Platform" class="grid">
                     <flux:navlist.item icon="home" :href="route('dashboard')" :current="request()->routeIs('dashboard')" wire:navigate>Dashboard</flux:navlist.item>
+                    
+                    
+                    <flux:navlist.item
+                        icon="truck"
+                        :href="route('vehicles.index')"
+                        :current="request()->routeIs('vehicles.*')"
+                        wire:navigate
+                    >
+                        Mój garaż
+                    </flux:navlist.item>
+
+                    <flux:navlist.item
+                        icon="calculator"
+                        :href="route('fuel-calculator')"
+                        :current="request()->routeIs('fuel-calculator')"
+                        wire:navigate
+                    >
+                        Kalkulator kosztu podróży
+                    </flux:navlist.item>
+
                 </flux:navlist.group>
             </flux:navlist>
 
